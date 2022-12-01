@@ -22,7 +22,6 @@ import com.example.jetnews.screens.HomeAction_search_home_profile.MainScreen
 import com.example.jetnews.screens.HomeAction_search_home_profile.MyNews.MyNewsScreen
 import com.example.jetnews.screens.MainViewModel
 import com.example.jetnews.screens.SignUp_SingIn.ForgotPassword.ForgetPasswordScreen
-import com.example.jetnews.screens.SignUp_SingIn.ResetPassword.ResetPasswordScreen
 import com.example.jetnews.screens.SignUp_SingIn.SignIn.SignInScreen
 import com.example.jetnews.screens.SignUp_SingIn.SignUp.SignUpScreen
 import com.example.jetnews.screens.SplashScreen.SplashScreen

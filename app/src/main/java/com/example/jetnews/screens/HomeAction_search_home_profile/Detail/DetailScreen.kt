@@ -43,6 +43,7 @@ import androidx.compose.ui.res.painterResource
 import com.example.jetnews.screens.HomeAction_search_home_profile.Home.NewsBox
 import com.example.jetnews.R
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 //@RequiresApi(Build.VERSION_CODES.O)
 //@Composable
@@ -190,6 +191,8 @@ fun DetailScreen(
 
     val currentUser = auth.currentUser?.email.toString().split("@")[0]
 
+    val fireDatabase = FirebaseDatabase.getInstance().getReference(currentUser)
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -220,7 +223,9 @@ fun DetailScreen(
                         mainViewModel.pushListOfArticle(user = currentUser,art = mainViewModel.clickedNews.value!!)
                     })
                 }else{
-                    Image(painter = painterResource(id = R.drawable.bookmark_added), contentDescription = null,modifier = Modifier.size(34.dp))
+                    Image(painter = painterResource(id = R.drawable.bookmark_added), contentDescription = null,modifier = Modifier.size(34.dp).clickable{
+                        fireDatabase.child("UserData").child("article")
+                    })
                 }
 
 

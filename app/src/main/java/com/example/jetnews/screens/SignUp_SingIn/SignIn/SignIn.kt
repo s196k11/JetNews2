@@ -159,20 +159,6 @@ fun SignInScreen(navController: NavController,mainViewModel: MainViewModel,auth:
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done,
                     keyboardType = KeyboardType.Password),
                 keyboardActions = KeyboardActions(onDone = {
-//                    auth.signInWithEmailAndPassword(email.value, password.value)
-//                        .addOnCompleteListener() { task ->
-//                            if (task.isSuccessful) {
-//                                Log.d("FireBase", task.result.toString())
-//                                message.value = ""
-//                                navController.navigate(JetScreens.MainScreen.name) {
-//                                    popUpTo(JetScreens.MainScreen.name)
-//                                }
-//                            } else {
-//                                Log.d("FireBaseElse", task.exception?.message.toString())
-//                                message.value = "Invalid UserId and Password"
-//
-//                            }
-//                        }
                     focusManager.clearFocus(force = true)
                 })
 

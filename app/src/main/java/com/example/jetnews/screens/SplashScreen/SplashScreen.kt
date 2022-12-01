@@ -35,7 +35,7 @@ fun SplashScreen(navController: NavController,mainViewModel: MainViewModel,auth:
     val database = FirebaseDatabase.getInstance().getReference(user).child("UserData")
 
 
-//    auth.signOut()
+
 
 
 

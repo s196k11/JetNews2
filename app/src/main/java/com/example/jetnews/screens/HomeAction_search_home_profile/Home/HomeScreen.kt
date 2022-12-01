@@ -59,8 +59,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.delay
 
 
-//@Preview(showSystemUi = true)
-//@RequiresApi(Build.VERSION_CODES.O)
+
 @Composable
 fun HomeScreen(navController: NavHostController, mainViewModel: MainViewModel,auth: FirebaseAuth) {
     val config = LocalConfiguration.current
@@ -76,8 +75,7 @@ fun HomeScreen(navController: NavHostController, mainViewModel: MainViewModel,au
     val focusRequest = remember { FocusRequester() }
     val focusManager = LocalFocusManager.current
 
-//    val auth = Firebase.auth
-//    private val currentUser = auth.currentUser?.email.toString().split("@")[0]
+
     val database = FirebaseDatabase.getInstance().getReference(currentUser).child("UserData")
 
 
@@ -150,11 +148,7 @@ fun HomeScreen(navController: NavHostController, mainViewModel: MainViewModel,au
                 })
             )
 
-//            Icon(imageVector = Icons.Default.Notifications,
-//                contentDescription = "filter",
-//                modifier = Modifier
-//                    .size(45.dp)
-//                    .padding(start = 2.dp))
+
         }
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -328,15 +322,5 @@ fun NewsBox(
                 )
             }
         }
-
-//        Icon(painter = painterResource(id = R.drawable.bookmark),
-//            contentDescription = null,
-//            modifier = Modifier
-//                .align(Alignment.BottomEnd)
-//                .size(35.dp)
-//                .padding(end = 10.dp, bottom = 10.dp)
-//                .clickable { onBookMarkClick() },
-//            tint = Color.Blue
-//        )
     }
 }
